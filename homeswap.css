@@ -1,0 +1,101 @@
+/* testing */
+div {
+	border: 0px solid #f00;
+}
+
+/* nasconde il blocco originale */
+body.welcome-page div#react {
+	display: none !important;
+}
+
+/* nasconde homestatic nelle pagine interne */
+div.homestatic {
+	display: none;
+	text-align: center;
+	color: #fff;
+	min-height: 550px; 
+	position: relative;
+}
+
+/* stili di base */
+div.homestatic p, 
+div.homestatic h1,
+div.homestatic h2,
+div.homestatic h3,
+div.homestatic h4,
+div.homestatic h5,
+div.homestatic a
+{
+	color: #fff;
+}
+
+/* personalizzazioni */
+img.homelogo {
+	max-width: 600px;
+	width: 80vw;
+	margin: 50px 0;
+}
+
+input::placeholder {
+  color: var(--c, grey);
+}
+
+body.welcome-page {
+	background-image: url(https://your.url.ext/bkg.jpg);
+	background-size: cover;
+}
+
+body.welcome-page div.homestatic {
+	display: block !important;
+	height: 100%;
+}
+
+body.welcome-page input, body.welcome-page button {
+	display: inline;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	font-size: 24px;
+}
+
+body.welcome-page div.authbox {
+	border: 2px solid #fff;
+	border-radius: 10px;
+	margin: 10 auto;
+	width: 80vw;
+	max-width: 600px;
+	/*background-color: rgba(255,255,255,0.3);*/
+	background-color: rgba(10,10,10,0.3);
+	padding: 20px;
+	box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.2); 
+}
+
+body.welcome-page a {
+	text-decoration: underline;
+}
+
+body.welcome-page a:hover {
+	color: #aaa;
+}
+
+button:hover {
+	background-color: rgb(98, 195, 255);
+}
+
+div.authbox p {
+	font-size: 1.5em;
+}
+
+p.sopra {
+	text-align: center;
+	width: 100%;
+}
+
+p.sotto {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
+}

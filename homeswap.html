@@ -1,0 +1,34 @@
+<div class="homestatic">
+	<img class="homelogo" src="https://your.url.ext/logo.png" />
+	<h1>Sistema di meeting virtuale</h1>
+	<div class="authbox">
+		<p>Inserisci la stringa identificativa della tua sessione</p>
+  		<input class="campo" id="sessione" placeholder="stringa">
+		<button id="vai" class="bottone" onclick="openmeet()">vai</button>
+	</div>
+	<!-- <p class="sopra">Powered by <a href="https://www.jitsi.org" target="_blank">Jitsi Meet</a> | Hosted by <a href="https://www.sablab.it">sablab.it</a></p> -->
+	<p class="sotto">Powered by <a href="https://www.jitsi.org" target="_blank">Jitsi Meet</a> | Hosted by <a href="https://your.url.ext">yoururl.ext</a></p>
+</div>
+
+	<script>
+		// intercetta l'enter
+		var input = document.getElementById("sessione");
+		input.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("vai").click();
+			}
+		});
+
+		// apre la sessione
+		function openmeet() {
+			var element = document.getElementById('sessione');
+			if (element != null && element.value != '') {
+				//window.open(element.value, "_blank", "toolbar=no,scrollbars=no,resizable=no,width=1000,height=800"); // apre in nuova finestra
+				window.open(element.value, "_self");
+			} else {
+				document.getElementById("sessione").placeholder = "campo obbligatorio!";
+				//document.getElementById("sessione").style.setProperty("--c", "red"); // cambia il colore del testo
+			}
+		}
+	</script>
